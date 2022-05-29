@@ -1,0 +1,13 @@
+.ic-table {
+  th,
+  td {
+    padding: 0.1rem;
+  }
+  thead {
+    th {
+      background-color: $bg-th;
+      font-weight: normal;
+      text-align: center;
+    }
+  }
+}

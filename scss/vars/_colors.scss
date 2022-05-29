@@ -1,0 +1,41 @@
+$white: #fff;
+$black: #000;
+
+$secondary: #c8001a;
+$secondary-strong: #bc000e;
+$secondary-500: #bc000e;
+
+$primary: #f0f0f0;
+$primary-300: #a1a1a1;
+$primary-500: #7e7e7e;
+
+$border: #909090;
+
+// Text
+$text-primary: #f0f0f0;
+$text-secondary: #c8001a;
+$text-muted: #c2c2c2;
+
+// Box shadow
+$dropdown-shadow: 1px 1px 1px 1px $primary-500;
+$checkbox-shadow: 1px 1px $primary-500;
+
+// Gradient
+$primary-gradient: linear-gradient(to top, #c1c1c1, #efefef, #fcfcfc);
+$secondary-gradient: linear-gradient(to top, #8b0006, #ba001c, #ba001c);
+$primary-strong-gradient: linear-gradient(
+  to top,
+  $primary-500,
+  #a1a1a1,
+  #a1a1a1,
+  $primary-500
+);
+
+// Font Sizes
+$font-md: 12px;
+$font-lg: 16px;
+$font-xl: 24px;
+$font-sm: 8px;
+
+// Table
+$bg-th: #b7b7b7;

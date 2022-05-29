@@ -1,0 +1,46 @@
+.ic-dropdown {
+  background-color: $primary;
+  outline: none;
+  &:forcus {
+    outline: none;
+  }
+
+  .btn-ic-dropdown {
+    position: relative;
+    background-image: $primary-gradient;
+    border: solid $border 1px;
+    padding: 0;
+    line-height: 1.8;
+    &:focus {
+      box-shadow: none;
+    }
+    &::after {
+      position: relative;
+      height: 100%;
+      color: $white;
+      z-index: 10;
+      margin: 0 0.235em;
+    }
+    .ic-caret {
+      position: absolute;
+      right: 0;
+      width: 20px;
+      height: 100%;
+      background-image: $secondary-gradient;
+    }
+  }
+  .dropdown-menu {
+    border-radius: 0;
+    padding: 0;
+    box-shadow: $dropdown-shadow;
+    .ic-dropdown-item {
+      color: $black;
+      padding: 0 2px;
+      &:hover {
+        cursor: pointer;
+        color: $white;
+        background-color: $primary-500;
+      }
+    }
+  }
+}
