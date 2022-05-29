@@ -1,0 +1,46 @@
+.layout {
+    border: solid $border 1px;
+    position: relative;
+    background-color: $primary;
+    .tb-header {
+        position: relative;
+        height: 40px;
+        background-color: $primary;
+        border-bottom: solid $border 1px;
+        box-shadow: 0 1px 4px 1px $border;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+    }
+
+    .tb-navbar {
+        border-bottom: solid $secondary 5px;
+        .nav-container {
+            margin: 0;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            .nav-item {
+                padding: 0.25rem;
+                margin-right: 0.5rem;
+                cursor: pointer;
+                &:hover {
+                    color: $white;
+                    background-color: $primary-500;
+                }
+            }
+        }
+    }
+    .tb-content {
+        .tb-data-view {
+            width: 100%;
+            height: 800px;
+            border-right: solid $border 1px;
+            .dv-container {
+            }
+        }
+    }
+}
