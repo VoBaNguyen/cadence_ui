@@ -50,11 +50,92 @@
         </section>
         <!-- End Navbar -->
         <!-- Content -->
-        <section class="row tb-content">
-          <div class="col-3 tb-data-view">
-            <div class="dv-container">content</div>
+        <section class="row tb-content px-2">
+          <!-- Content Left -->
+          <div class="col-3 max-w-400 content-left">
+            <button class="btn-ic btn-ic-secondary my-2">Import</button>
+            <div class="dv-container">
+              <ul class="tree-root">
+                <li class="tree-branch">
+                  <div class="symbol-wrapper d-flex">
+                    <span class="symbol-expand"></span>
+                    <span class="tree-leaf">Tests</span>
+                  </div>
+                  <ul class="tree-nested">
+                    <li class="tree-branch">
+                      <div class="symbol-wrapper d-flex">
+                        <span class="symbol-expand"></span>
+                        <span class="tree-leaf">TRAN</span>
+                      </div>
+                      <ul class="tree-nested">
+                        <li class="tree-branch">
+                          <div class="symbol-wrapper d-flex">
+                            <span class="symbol-expand"></span>
+                            <span
+                              class="tree-leaf"
+                              data-toggle="modal"
+                              data-target="#analyses"
+                              >Analyses</span
+                            >
+                          </div>
+                          <ul class="tree-nested">
+                            <li class="tree-leaf">dc</li>
+                            <li class="tree-leaf">ac</li>
+                          </ul>
+                        </li>
+                        <li class="tree-branch">
+                          <div class="symbol-wrapper d-flex">
+                            <span class="symbol-expand"></span>
+                            <span class="tree-leaf">Design Variables</span>
+                          </div>
+
+                          <ul class="tree-nested">
+                            <li class="tree-leaf">vddh</li>
+                            <li class="tree-leaf">vddc</li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="tree-branch">
+                  <div class="symbol-wrapper d-flex">
+                    <span class="symbol-expand"></span>
+                    <span class="tree-leaf">Global Variables</span>
+                  </div>
+                  <ul class="tree-nested">
+                    <li class="tree-leaf">Var 1</li>
+                    <li class="tree-leaf">Var 2</li>
+                    <li class="tree-leaf">Var 3</li>
+                  </ul>
+                </li>
+                <li class="tree-branch">
+                  <span class="symbol-expand">Parameters</span>
+                </li>
+                <li class="tree-branch">
+                  <div class="symbol-wrapper d-flex">
+                    <span class="symbol-expand"></span>
+                    <span class="tree-leaf">Corners</span>
+                  </div>
+                  <ul class="tree-nested">
+                    <li class="tree-leaf">TTTTTNNN</li>
+                    <li class="tree-leaf">FFFFTHHH_Ibias0p9</li>
+                    <li class="tree-leaf">FFFFTHHH_Ibias1p1</li>
+                    <li class="tree-leaf">FFFFTHHL_Ibias0p9</li>
+                    <li class="tree-leaf">FFFFTHHL_Ibias1p1</li>
+                    <li class="tree-leaf">SSSSTLLH_Ibias0p9</li>
+                    <li class="tree-leaf">SSSSTLLH_Ibias1p1</li>
+                    <li class="tree-leaf">SSSSTLLL_Ibias0p9</li>
+                    <li class="tree-leaf">SSSSTLLL_Ibias1p1</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="col-9 tb-output-setup">
+          <!-- End Content Left -->
+          <!-- Content Right -->
+          <div class="col w-100 tb-output-setup">
+            <button class="btn-ic btn-ic-secondary my-2">Import</button>
             <table class="table table-striped table-sm table-bordered ic-table">
               <thead class="ic-th">
                 <tr>
@@ -86,6 +167,7 @@
               </tbody>
             </table>
           </div>
+          <!-- End Content Right -->
         </section>
         <!-- End Content -->
       </div>
@@ -320,6 +402,109 @@
           </div>
         </div>
         <!-- End Modal Job Setup -->
+        <!-- Modal Analyses -->
+        <div
+          class="modal fade"
+          id="analyses"
+          data-backdrop="static"
+          data-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+        >
+          <div class="modal-dialog modal-lg ic-modal-dialog">
+            <div class="modal-content ic-modal-content">
+              <div class="modal-header ic-modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">
+                  Choosing Analyses - SVI ADE
+                </h5>
+                <button
+                  type="button"
+                  class="close ic-modal-close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body ic-modal-body">
+                <div class="row modal-row">
+                  <div class="col max-w-200">Analysis</div>
+                  <div class="col w-100 d-flex">
+                    <label class="ic-form-control mr-3">
+                      <input
+                        type="radio"
+                        name="ic-radio"
+                        value="tran"
+                        checked
+                      />
+                      tran
+                    </label>
+                    <label class="ic-form-control mr-3">
+                      <input type="radio" name="ic-radio" value="dc" />
+                      dc
+                    </label>
+                    <label class="ic-form-control mr-3">
+                      <input type="radio" name="ic-radio" value="ac" />
+                      ac
+                    </label>
+                    <label class="ic-form-control mr-3">
+                      <input type="radio" name="ic-radio" value="noise" />
+                      noise
+                    </label>
+                  </div>
+                </div>
+                <hr />
+                <div class="ic-modal-section">
+                  <p class="ic-section-title">Transient Analysis</p>
+                  <div class="row modal-row">
+                    <div class="col max-w-200">Stop Time</div>
+                    <div class="col w-25">
+                      <input
+                        type="number"
+                        class="input-ic-text width-200 mr-3"
+                        name="stop-time"
+                      />
+                    </div>
+                  </div>
+                  <div class="row modal-row">
+                    <div class="col-12 my-2">
+                      <p>Accuracy Defaults (errpreset)</p>
+                    </div>
+                    <div class="col-12 d-flex">
+                      <label class="ic-form-control mr-3">
+                        <input type="checkbox" name="checkbox" />
+                        conservative
+                      </label>
+                      <label class="ic-form-control mr-3">
+                        <input type="checkbox" name="checkbox" />
+                        moderate
+                      </label>
+                      <label class="ic-form-control mr-3">
+                        <input type="checkbox" name="checkbox" />
+                        liberal
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer ic-modal-footer">
+                <button
+                  class="btn-ic btn-ic-secondary font-weight-bold"
+                  data-dismiss="modal"
+                >
+                  <u>O</u>K
+                </button>
+                <button
+                  class="btn-ic btn-ic-primary font-weight-bold"
+                  data-dismiss="modal"
+                >
+                  <u>C</u>ancel
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End Modal Analyses -->
       </div>
       <!-- End Modal Wrapper -->
     </div>

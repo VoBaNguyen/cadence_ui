@@ -1,0 +1,71 @@
+/* Remove default bullets */
+ul,
+.tree-root {
+  list-style-type: none;
+}
+
+/* Remove margins and padding from the parent ul */
+.tree-root {
+  margin: 0;
+  padding: 0;
+  /* Style the caret/arrow */
+  .tree-branch {
+    position: relative;
+    p {
+      display: inline-block;
+    }
+    .tree-leaf {
+      cursor: pointer;
+    }
+    .symbol-expand,
+    .symbol-collapse {
+      cursor: pointer;
+      user-select: none; /* Prevent text selection */
+      display: flex;
+      align-items: center;
+      &::before {
+        margin-right: 0.5rem;
+        display: inline-block;
+        content: "";
+        width: 0.7rem;
+        height: 0.7rem;
+        outline: solid $border 1px;
+        overflow: hidden;
+      }
+      &::after {
+        margin-right: 0.5rem;
+        display: inline-block;
+        content: "+";
+        position: absolute;
+        line-height: 0.7rem;
+        text-align: center;
+        width: 0.7rem;
+        height: 0.7rem;
+        overflow: hidden;
+      }
+    }
+    .symbol-collapse {
+      &::after {
+        content: "-";
+      }
+    }
+    .tree-nested {
+      display: none;
+      margin-left: 1.5rem;
+      &.active {
+        display: block;
+      }
+    }
+    // &::before {
+    //   display: block;
+    //   content: "";
+    //   position: absolute;
+    //   top: 20px;
+    //   left: 5px;
+    //   width: 1px;
+    //   height: 90%;
+    //   border-left: dashed $border 1px;
+    //   border-style: ;
+    // }
+  }
+}
