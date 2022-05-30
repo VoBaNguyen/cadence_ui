@@ -1,12 +1,13 @@
 @import "./base/reset";
 @import "./vars/colors";
+@import "./base/helper";
 
 // Components
 @import "./components/scrollbar";
 @import "./components/button";
 @import "./components/input";
 @import "./components/dropdown";
-@import "./components/model";
+@import "./components/modal";
 @import "./components/table";
 
 // Layouts
